@@ -66,12 +66,12 @@ function findInp(e) {
    
   if ((typeof ingr == 'string') && (borneGr == "gr")){
   console.log(ingr);
-  ml.value = round(gram * grml / 100, 1.0);
+  ml.value = round(gram * grml / 100, 5.0);
   }
   
   if ((typeof ingr === 'string') && (borneMl == "ml")){
   console.log(ingr);
-  gr.value = round(100 * vol / grml, 1.0);
+  gr.value = round(100 * vol / grml, 5.0);
   }
   
   if(id == "raz") {
