@@ -1,0 +1,101 @@
+/* f.poirrier */
+body{
+  font-family: 'Poppins';
+}
+
+input, select {
+  cursor: pointer !important;
+  text-align:center;
+  outline : true;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem; /*1rem = 16 px par défaut*/
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box- shadow .15s ease- in-out;
+}
+
+
+input:focus {
+  outline: none !important;
+  border-color: #f2d508;
+}
+
+input[type="button"] {
+  background-color: #f2d508;
+  border: 0px;
+}
+
+#Raz:active {
+  background-color: #efe5a2;
+  color: #ced4da;
+}
+
+.conv-container {
+  display : flex;
+  width:100%;
+  flex-direction : row;
+  margin-right :  auto;
+  flex-wrap : wrap;
+}
+
+.ing-item {
+  width:400px;
+  margin : 0.25rem;
+  display : flex;
+  align-items : center; 
+}
+
+.conv-item {
+  width:100px;
+  margin : 0.25rem;
+  display : flex;
+  align-items : center; 
+}
+
+.raz {
+  width:50px;
+  margin : 0.25rem;
+  display : flex;
+  align-items : center; 
+}
+
+.conv-item > label, .raz > label{
+  width:40px;
+  text-align : center;
+  margin-right : 0.3rem;
+}
+
+.ing-item > label {
+  width:120px;
+  text-align : center;
+  margin-right : 0.3rem;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
