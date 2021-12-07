@@ -4,6 +4,8 @@ document.getElementById("gr").addEventListener("input",findInp);
 document.getElementById("ml").addEventListener("input",findInp);
 document.getElementById("raz").addEventListener("click",findInp);
 
+
+
 //définition des variables globales
 var id;
 var ingr;
@@ -23,7 +25,7 @@ conv[1] = new Array
 );
 
 function testValue(value) {
-  if ((isNaN(value) == true) || (value == -1) || ((borneGr == "gr") && (borneMl == "ml"))){
+  if ((isNaN(value) == true) || (value == -1)){
     id = "raz";
   }
 }
@@ -36,7 +38,7 @@ function round(value, step) {
 
 function findInp(e) {
   //e = event de l'input  
-  id = e.target.id; 
+  id = e.target.id;
   
   if(id == "ing") {
     ingr = (e.target.value);
@@ -48,11 +50,18 @@ function findInp(e) {
       gram = parseFloat(e.target.value);
       testValue (gram);
       borneGr= "gr";
+      if (borneMl == "ml"){
+        id = "raz";
+      }
             
     } else if (id == "ml"){
       vol = parseFloat(e.target.value);
       testValue (vol);
-      borneMl = "ml";     
+      borneMl = "ml";
+       if (borneGr == "gr"){
+        id = "raz";
+      }
+      console.log(borneMl);
     }
    
   if ((typeof ingr == 'string') && (borneGr == "gr")){
