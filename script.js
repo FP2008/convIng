@@ -8,6 +8,7 @@ document.getElementById("raz").addEventListener("click",findInp);
 
 //définition des variables globales
 var id;
+var valeur;
 var ingr;
 var pos;
 var grml;
@@ -39,7 +40,7 @@ function round(value, step) {
 function findInp(e) {
   //e = event de l'input  
   id = e.target.id;
-  
+   
   if(id == "ing") {
     ingr = (e.target.value);
     pos = conv[0].indexOf(ingr);
