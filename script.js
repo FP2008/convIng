@@ -65,11 +65,11 @@ function findInp(e) {
     }
    
   if ((typeof ingr == 'string') && (borneGr == "gr")){
-  ml.value = round(gram * grml / 100, 5.0);
+  ml.value = round(gram * grml / 100, 1.0);
   }
   
   if ((typeof ingr === 'string') && (borneMl == "ml")){
-  gr.value = round(100 * vol / grml, 5.0);
+  gr.value = round(100 * vol / grml, 1.0);
   }
   
   if(id == "raz") {
